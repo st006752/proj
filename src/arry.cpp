@@ -23,18 +23,32 @@ void  shiftarray(int arr[], size_t arrsi,int shift){
 
 }
 
+void  someFun(int sz){
+	int arr[sz];
+	fillarray(arr,sz);
+	int sum = 0;
+
+	for (int k = 0; k < sz;++k)
+		sum += arr[k];
+	std::cout << "sum = " << sum << std::endl;
+}
+
 int main(){
-	const size_t arrsize = 10;
-	int arr[arrsize];
-	fillarray(arr,arrsize);
-	printarray(arr,arrsize);\
+//	const size_t arrsize = 10;
+//	int arr[arrsize];
+//	fillarray(arr,arrsize);
+//	printarray(arr,arrsize);\
 
 	int shift = 0;
 	std::cin >> shift;
 
-	arr = &shift;
+	//arr = &shift;
 
-	shiftarray(arr,arrsize,shift);
-	printarray(arr,arrsize);
+//	shiftarray(arr,arrsize,shift);
+//	printarray(arr,arrsize);
+	
+//	std::cin >> shift; 
+
+	someFun(shift);
 	return 0;
 }

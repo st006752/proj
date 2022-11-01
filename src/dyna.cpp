@@ -43,6 +43,27 @@ int main(){
 	*p = 125;
 
 	std::cout << p << ' ' << * p << std::endl;
+	std::cout << &p[2] << ' ' << p[2] << std::endl;
+	std::cout << &p[9] << ' ' << p[9] << std::endl;
+
+
+	size_t Rows = 10;
+	size_t Cols = 12;
+
+	int** arr = new int*[Rows];
+	for (size_t k = 0; k< 10; ++k)
+		arr[k] = new int[Cols];
+
+
+	for (size_t r = 0; r< Rows; ++r)
+		for (size_t c = 0; c < Cols; ++c)
+			arr[r][c] = rand()%100;
+
+
+
+
+
+
 	++p;
 	*p = 126;
 	std::cout << p << ' ' << * p << std::endl;
